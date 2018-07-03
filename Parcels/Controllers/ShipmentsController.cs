@@ -9,7 +9,7 @@ namespace Parcels.Controllers
 {
     public class ShipmentsController : Controller
     {
-        [HttpGet("/shipping-info")]
+        [HttpPost("/shipping-info")]
         public ActionResult ShippingInfo(string length, string height, string width, string weight)
         {
             Shipment newShipment = new Shipment(length, height, width, weight);
