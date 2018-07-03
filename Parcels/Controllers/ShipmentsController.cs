@@ -10,9 +10,9 @@ namespace Parcels.Controllers
     public class ShipmentsController : Controller
     {
         [HttpGet("/shipping-info")]
-        public ActionResult ShippingInfo()
+        public ActionResult ShippingInfo(string length, string height, string width, string weight)
         {
-            Shipment newShipment = new Shipment(Request.Query["length"], Request.Query["height"], Request.Query["width"], Request.Query["weight"]);
+            Shipment newShipment = new Shipment(length, height, width, weight);
             //First coded attempt before refactoring constructor
             //newShipment.SetHeight(Request.Query["height"]);
             //newShipment.SetWidth(Request.Query["width"]);
